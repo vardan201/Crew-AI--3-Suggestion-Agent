@@ -1,0 +1,160 @@
+marketing_analysis_task:
+  description: >
+    Analyze the startup's marketing situation:
+    - Current Channels: {marketing_channels}
+    - Monthly Users: {monthly_users}
+    - Customer Acquisition Cost: {cac}
+    - Retention Strategy: {retention_strategy}
+    - Growth Problems: {growth_problems}
+    
+    You MUST provide exactly 5 specific, actionable marketing suggestions.
+    Each suggestion should be 1-2 sentences long and immediately actionable.
+    
+    IMPORTANT: Your response will be parsed as JSON with this exact structure:
+    {{"suggestions": ["suggestion 1", "suggestion 2", "suggestion 3", "suggestion 4", "suggestion 5"]}}
+    
+    Keep each suggestion concise (under 150 characters) to avoid token limits.
+    
+  expected_output: >
+    A valid JSON object with a "suggestions" array containing exactly 5 strings.
+    Each string is a detailed, actionable marketing suggestion (1-2 sentences).
+    Focus on: channels, acquisition, retention, and growth strategies.
+    
+    Example format:
+    {{"suggestions": [
+      "Launch a referral program offering 20% off to both referrer and referee",
+      "Create educational content targeting your ICP on LinkedIn",
+      "Implement email nurture sequences for trial users",
+      "Run A/B tests on landing page CTAs to improve conversion by 15%",
+      "Partner with complementary SaaS tools for co-marketing campaigns"
+    ]}}
+  agent: marketing_advisor
+
+tech_analysis_task:
+  description: >
+    Analyze the startup's technical infrastructure:
+    - Product Type: {product_type}
+    - Current Features: {current_features}
+    - Tech Stack: {tech_stack}
+    - Data Strategy: {data_strategy}
+    - AI Usage: {ai_usage}
+    - Technical Challenges: {tech_challenges}
+    
+    You MUST provide exactly 5 specific, actionable technical suggestions.
+    Each suggestion should be 1-2 sentences long and immediately actionable.
+    
+    IMPORTANT: Your response will be parsed as JSON with this exact structure:
+    {{"suggestions": ["suggestion 1", "suggestion 2", "suggestion 3", "suggestion 4", "suggestion 5"]}}
+    
+    Keep each suggestion concise (under 150 characters) to avoid token limits.
+    
+  expected_output: >
+    A valid JSON object with a "suggestions" array containing exactly 5 strings.
+    Each string is a detailed, actionable technical suggestion (1-2 sentences).
+    Focus on: scalability, architecture, performance, security, or technical debt.
+    
+    Example format:
+    {{"suggestions": [
+      "Migrate to microservices architecture to improve scalability and deployment speed",
+      "Implement Redis caching layer to reduce database load by 40%",
+      "Add comprehensive logging and monitoring with Datadog or New Relic",
+      "Set up automated CI/CD pipeline to reduce deployment time to under 10 minutes",
+      "Conduct security audit and implement OAuth 2.0 for authentication"
+    ]}}
+  agent: tech_lead
+
+org_hr_analysis_task:
+  description: >
+    Analyze the startup's organizational structure and people strategy:
+    - Team Size: {team_size}
+    - Founder Roles: {founder_roles}
+    - Hiring Plan (Next 3 Months): {hiring_plan}
+    - Organizational Challenges: {org_challenges}
+    
+    You MUST provide exactly 5 specific, actionable organizational and HR suggestions.
+    Each suggestion should be 1-2 sentences long and immediately actionable.
+    
+    IMPORTANT: Your response will be parsed as JSON with this exact structure:
+    {{"suggestions": ["suggestion 1", "suggestion 2", "suggestion 3", "suggestion 4", "suggestion 5"]}}
+    
+    Keep each suggestion concise (under 150 characters) to avoid token limits.
+    
+  expected_output: >
+    A valid JSON object with a "suggestions" array containing exactly 5 strings.
+    Each string is a detailed, actionable organizational/HR suggestion (1-2 sentences).
+    Focus on: hiring, team structure, culture, retention, or organizational processes.
+    
+    Example format:
+    {{"suggestions": [
+      "Hire a senior product manager to bridge gap between engineering and customers",
+      "Implement weekly all-hands meetings to improve transparency and alignment",
+      "Create structured onboarding process to reduce new hire ramp-up time by 30%",
+      "Establish clear career progression paths for engineering roles",
+      "Set up quarterly performance reviews with 360-degree feedback"
+    ]}}
+  agent: org_hr_strategist
+
+competitive_analysis_task:
+  description: >
+    Analyze the startup's competitive landscape and market position:
+    - Known Competitors: {competitors}
+    - Unique Advantage: {unique_advantage}
+    - Pricing Model: {pricing_model}
+    - Market Risks: {market_risks}
+    - Product Type: {product_type}
+    
+    You MUST provide exactly 5 specific, actionable competitive strategy suggestions.
+    Each suggestion should be 1-2 sentences long and immediately actionable.
+    
+    IMPORTANT: Your response will be parsed as JSON with this exact structure:
+    {{"suggestions": ["suggestion 1", "suggestion 2", "suggestion 3", "suggestion 4", "suggestion 5"]}}
+    
+    Keep each suggestion concise (under 150 characters) to avoid token limits.
+    
+  expected_output: >
+    A valid JSON object with a "suggestions" array containing exactly 5 strings.
+    Each string is a detailed, actionable competitive strategy suggestion (1-2 sentences).
+    Focus on: differentiation, positioning, competitive threats, or market opportunities.
+    
+    Example format:
+    {{"suggestions": [
+      "Create competitive battlecards for sales team highlighting your unique AI capabilities",
+      "Launch free tier to compete with freemium competitors and capture market share",
+      "Partner with industry leaders to leverage their distribution channels",
+      "Develop vertical-specific features for healthcare to differentiate from horizontal competitors",
+      "Monitor competitor pricing monthly and adjust positioning to maintain 20% premium"
+    ]}}
+  agent: competitive_analyst
+
+finance_analysis_task:
+  description: >
+    Analyze the startup's financial health and sustainability:
+    - Monthly Burn Rate: {monthly_burn}
+    - Current Revenue: {current_revenue}
+    - Funding Status: {funding_status}
+    - Runway (Months): {runway_months}
+    - Financial Concerns: {financial_concerns}
+    - Team Size: {team_size}
+    
+    You MUST provide exactly 5 specific, actionable financial suggestions.
+    Each suggestion should be 1-2 sentences long and immediately actionable.
+    
+    IMPORTANT: Your response will be parsed as JSON with this exact structure:
+    {{"suggestions": ["suggestion 1", "suggestion 2", "suggestion 3", "suggestion 4", "suggestion 5"]}}
+    
+    Keep each suggestion concise (under 150 characters) to avoid token limits.
+    
+  expected_output: >
+    A valid JSON object with a "suggestions" array containing exactly 5 strings.
+    Each string is a detailed, actionable financial suggestion (1-2 sentences).
+    Focus on: burn rate, revenue growth, unit economics, fundraising, or cost optimization.
+    
+    Example format:
+    {{"suggestions": [
+      "Reduce cloud infrastructure costs by 30% through reserved instances and autoscaling",
+      "Implement annual pricing plans with 20% discount to improve cash flow predictability",
+      "Negotiate vendor contracts to reduce SaaS spend by $15K monthly",
+      "Start fundraising process now to close Series A 6 months before runway ends",
+      "Improve gross margins from 60% to 75% by automating customer onboarding"
+    ]}}
+  agent: finance_advisor

@@ -1,0 +1,9 @@
+crewai[tools]==1.7.2
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+python-multipart==0.0.12
+python-dotenv==1.0.0
+groq
+openai==1.83.0
+litellm>=1.0.0,<2.0.0
